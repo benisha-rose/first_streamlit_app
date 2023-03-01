@@ -25,7 +25,7 @@ streamlit.dataframe(my_fruit_list)
 try :
   streamlit.header("Fruityvice Fruit Advice!")
   if not fruit_choice:
-      streamlit.error("please select a fruit to get information")
+    streamlit.error("please select a fruit to get information")
   else :
     fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
     fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
